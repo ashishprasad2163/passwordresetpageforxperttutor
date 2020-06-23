@@ -1,0 +1,43 @@
+.bg {
+  background: url('../images/backnew.png') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: 200%;
+}
+
+.btn {
+  background-color: #16425b;
+  color: #ffffff;
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #16425b;
+  position: absolute;
+  top: 15vh;
+}
+
+.loader {
+  display: block;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #16425b;
+  border-bottom: 16px solid #16425b;
+  border-radius: 100%;
+  margin-left: 30%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 678px) {
+  .bg {
+    background-size: 300%;
+  }
+}
