@@ -1,8 +1,8 @@
 const result = document.getElementById('result');
 const url = window.location.href;
 const pointer = url.indexOf('%');
-const secret = url.slice(pointer + 1);
-const token = 'Bearer ' + secret;
+const secret = url.slice(pointer + 3);
+const token = `Bearer ${secret}`;
 
 function myFunction() {
   var x = document.getElementById('password');
@@ -20,9 +20,10 @@ function sendData(e) {
     Accept: 'application/json',
     Authorization: token,
   };
+
   axios
-    .post(
-      'http://165.22.219.239:4000/api/users/resetpassword',
+    .put(
+      'http://192.168.29.249:4000/api/users/resetpassword',
       {
         newPassword: password,
         resetLink: token,
@@ -48,6 +49,9 @@ function sendData(e) {
     })
     .catch(function (error) {
       console.log('error', error.message);
+      console.log(pointer);
+      console.log('secret=', secret);
+      console.log('token', token);
       alert(error);
     });
 
