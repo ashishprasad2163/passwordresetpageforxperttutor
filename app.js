@@ -23,7 +23,7 @@ function sendData(e) {
 
   axios
     .put(
-      'http://192.168.29.249:4000/api/users/resetpassword',
+      'http://167.71.238.21:4000/api/users/resetpassword',
       {
         newPassword: password,
         resetLink: token,
@@ -46,6 +46,7 @@ function sendData(e) {
       // console.log(url.indexOf("="));
       // console.log(url.slice(43));
       alert(data);
+      window.location.replace('http://167.71.238.21/result.html');
     })
     .catch(function (error) {
       console.log('error', error.message);

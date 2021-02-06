@@ -18,6 +18,15 @@
   position: absolute;
   top: 15vh;
 }
+.result-container {
+  background: #fff;
+  color: #16425b;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #16425b;
+  position: absolute;
+  top: 15vh;
+}
 
 .loader {
   display: block;
@@ -32,8 +41,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 678px) {
