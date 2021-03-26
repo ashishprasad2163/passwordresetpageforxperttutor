@@ -23,7 +23,7 @@ function sendData(e) {
 
   axios
     .put(
-      'http://206.189.128.104:4000/api/users/resetpassword',
+      'http://cpzedu.com:4000/api/users/resetpassword',
       {
         newPassword: password,
         resetLink: token,
@@ -46,7 +46,7 @@ function sendData(e) {
       // console.log(url.indexOf("="));
       // console.log(url.slice(43));
       alert(data);
-      window.location.replace('http://206.189.128.104/result.html');
+      window.location.replace('http://cpzedu.com/result.html');
     })
     .catch(function (error) {
       console.log('error', error.message);
